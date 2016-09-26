@@ -1,0 +1,33 @@
+{
+  "name": "vcloud-node-sdk",
+  "version": "1.0.3",
+  "description": "SDK with Node.js for VCloud163",
+  "main": "index.js",
+  "dependencies": {
+    "log4js": "^0.6.38",
+    "request": "^2.75.0",
+    "sqlite3": "^3.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index"
+  },
+  "keywords": [
+    "cloud",
+    "vcloud",
+    "api",
+    "netease"
+  ],
+  "author": {
+    "name": "vcloud163",
+    "email": "vcloud-ntes@188.com",
+    "url": "http://vcloud.163.com/"
+  },
+  "contributors": [
+    {
+      "name": "Fuyun",
+      "email": "ifuyun@outlook.com"
+    }
+  ],
+  "license": "MIT"
+}
