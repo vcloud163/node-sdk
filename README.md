@@ -23,6 +23,7 @@ let uploadSdk = require('vcloud-node-sdk');
 2. 登陆视频云开发者平台，通过管理控制台->账户信息获取 AppKey 和 AppSecret。
 
 在获取到 AppKey 和 AppSecret 之后，可按照如下方式进行初始化：
+
 ```js
 uploadSdk.init({
     appKey: '[App Key]',
@@ -41,13 +42,17 @@ uploadSdk.init({
 
 ### 4.2 文件上传
 调用upload接口，传入文件路径即可完成文件上传，路径支持相对路径（相对于index.js文件）或绝对路径（推荐）。
+
 示例：
+
 ```js
 uploadSdk.upload('E:/Hello.mp4');
 ```
 ### 4.3 断点续传
 upload接口同时支持断点续传，只需传入同一文件的路径再次调用upload接口即可，SDK会自动查询断点并进行续传。
+
 示例：
+
 ```js
 uploadSdk.upload('E:/Hello.mp4');
 ```

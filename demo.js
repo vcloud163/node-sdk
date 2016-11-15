@@ -11,4 +11,4 @@ uploadSdk.init({
     trunkSize: 4 * 1024 * 1024,
     logLevel: 'INFO'
 });
-uploadSdk.upload('./Hello.mp4');
+uploadSdk.upload('E:/Hello.mp4');

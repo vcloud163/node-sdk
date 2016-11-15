@@ -1,7 +1,7 @@
 'use strict';
 /**
  * 网易视频云node.js版本上传SDK
- * @version 1.0.0
+ * @version 1.0.5
  * @since 1.0.0
  * @author NetEase_VCloud_FE_Team
  */
@@ -17,8 +17,8 @@ let logger;
 
 //配置对象
 let config = {
-    appKey: 'your app key',
-    appSecret: 'your app secret',
+    appKey: '[App Key]',
+    appSecret: '[App Secret]',
     nonce: Math.round(Math.random() * Math.pow(10, 16)).toString(),
     curTime: Math.round(Date.now() / 1000).toString(),
     trunkSize: 4 * 1024 * 1024,
@@ -308,7 +308,6 @@ function * uploads() {
         }
         yield removeFile(fileData);
         logger.info('upload success.');
-        logger.info('File upload path:', 'http://nos.netease.com/' + initData.nos_bucket + '/' + initData.nos_object);
     } catch (e) {
         logger.error(e);
     }
@@ -318,10 +317,10 @@ module.exports = {
     /**
      * 初始化
      * @param {Object} conf 配置对象
-     *     {Number}[appKey] App Key,
-     *     {Number}[appSecret] App Secret,
-     *     {Number}[trunkSize=4*1024*1024] 分片大小，最大值：4MB,
-     *     {Number}[logLevel='INFO'] 'INFO'
+     *     {String}[appKey] App Key,
+     *     {String}[appSecret] App Secret,
+     *     {Number}[trunkSize=4*1024*1024] 分片大小（单位：Byte），最大值：4MB,
+     *     {String}[logLevel='INFO'] 'INFO'
      * @returns {mixed}
      */
     init: function (conf) {

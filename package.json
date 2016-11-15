@@ -1,6 +1,6 @@
 {
   "name": "vcloud-node-sdk",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "SDK with Node.js for VCloud163",
   "main": "index.js",
   "dependencies": {
